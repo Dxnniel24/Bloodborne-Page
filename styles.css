@@ -1,0 +1,375 @@
+:root {
+    --altura_menu: 60px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/731/785/99/video-games-bloodborne-wallpaper-preview.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: justify;
+    color: white;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  header {
+    height: var(--altura_menu);
+  }
+  
+  .bar_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 2em;
+    height: var(--altura_menu);
+    top: 0;
+  }
+  
+  #menu_burger {
+    display: none;
+  }
+  
+  .logo_nav {
+    display: flex;
+    gap: 10px;
+  }
+  .logo {
+    width: 13vw;
+  }
+  
+  .links {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .links:hover {
+    color: #660000;
+    transition-duration: 0.5s;
+  }
+  
+  .menu_burger:checked + .ul_links {
+    height: calc(100vh - var(--altura_menu));
+  }
+  
+  .label_burger {
+    display: none;
+    position: absolute;
+    right: 2em;
+  }
+  
+  .ul_links {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    position: absolute;
+    right: 2em;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+  }
+  
+  .burger_icono {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .burger_icono:hover {
+    color: #660000;
+    transition-duration: 0.5s;
+  }
+  
+  @media (width <= 768px) {
+    .label_burger {
+      display: block;
+    }
+    .ul_links {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: var(--altura_menu);
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .links {
+      font-size: 3em;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px 15px;
+      border-radius: 25px;
+    }
+    .links:hover {
+      cursor: pointer;
+      color: #660000;
+    }
+  }
+  
+  .titulo {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .titulo_criticas {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .h_titulo {
+    color: #660000;
+    font-size: 3em;
+  }
+  
+  .h2 {
+    color: #660000;
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  .h2_arr {
+    color: #660000;
+    font-size: 1em;
+    text-align: center;
+    padding: 20vh;
+  }
+  
+  .caja_p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10vh;
+  }
+  
+  .caja_p1 p {
+    max-width: 130vh;
+    width: 100%;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.2em;
+  }
+  
+  .b {
+    color: #a50000;
+  }
+  
+  .h3 {
+    color: #660000;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+  }
+  
+  .tabla_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 6vh;
+    padding-top: 20vh;
+    margin: 0, 5vh;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  .div2_tabla_1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-bottom: 5vh;
+  }
+  
+  .div3_tabla_1 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-bottom: 5vh;
+  }
+  
+  .div4_tabla_1 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    margin-bottom: 5vh;
+  }
+  
+  .div5_tabla_1 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    margin-bottom: 5vh;
+  }
+  
+  .div5_tabla_1 span {
+    display: block;
+  }
+  
+  .div6_tabla_1 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  
+  .div7_tabla_1 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  
+  .div8_tabla_1 {
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+  
+  .div8_tabla_1 span {
+    display: block;
+  }
+  
+  .tabla_2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 6vh;
+    padding-top: 20vh;
+    margin: 0, 5vh;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  .bloodborne-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .bloodborne-container {
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    color: #e0e0e0;
+  }
+  
+  .bloodborne-title {
+    color: #660000;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .bloodborne-description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .bloodborne-input-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bloodborne-input {
+    padding: 10px;
+    flex: 1;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    color: #660000;
+  }
+  
+  .bloodborne-input::placeholder {
+    color: #660000;
+    opacity: 1;
+  }
+  
+  .bloodborne-button {
+    padding: 10px 15px;
+    background-color: #660000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .bloodborne-button:hover {
+    background-color: white;
+    color: #660000;
+    transition: 0.5s;
+  }
+  
+  .bloodborne-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .bloodborne-task {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .bloodborne-task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #999;
+  }
+  
+  .bloodborne-task-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #660000;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .bloodborne-task-button:hover {
+    background-color: white;
+    color: #660000;
+    transition: 0.3s;
+  }
